@@ -85,7 +85,7 @@ def error(update,bot):
 
 if __name__=="__main__":
     bot=Bot(TOKEN)
-    bot.set_webhook("https://desolate-reaches-63959.herokuapp.com/"+TOKEN)    #from heroku app
+    bot.set_webhook("https://vast-plains-55036.herokuapp.com/"+TOKEN)    #from heroku app
     dp=Dispatcher(bot,None)
     dp.add_handler(CommandHandler("start",start))
     dp.add_handler(CommandHandler("help",_help))
