@@ -81,19 +81,19 @@ def error(update,bot):
     logger.error("Update {} has caused error: ".format(update.message.chat.id))
 
 
-
+bot=Bot(TOKEN)
+bot.set_webhook("https://newsbot2216.herokuapp.com/"+TOKEN)    #from heroku app
+dp=Dispatcher(bot,None)
+dp.add_handler(CommandHandler("start",start))
+dp.add_handler(CommandHandler("help",_help))
+dp.add_handler(CommandHandler("news",news))
+    #dp.add_handler(MessageHandler(Filters.text,echo_text))
+dp.add_handler(MessageHandler(Filters.sticker,echo_sticker))
+dp.add_handler(MessageHandler(Filters.text,reply_text))
+dp.add_error_handler(error)
 
 if __name__=="__main__":
-    bot=Bot(TOKEN)
-    bot.set_webhook("https://newsbot2216.herokuapp.com/"+TOKEN)    #from heroku app
-    dp=Dispatcher(bot,None)
-    dp.add_handler(CommandHandler("start",start))
-    dp.add_handler(CommandHandler("help",_help))
-    dp.add_handler(CommandHandler("news",news))
-    #dp.add_handler(MessageHandler(Filters.text,echo_text))
-    dp.add_handler(MessageHandler(Filters.sticker,echo_sticker))
-    dp.add_handler(MessageHandler(Filters.text,reply_text))
-    dp.add_error_handler(error)
+   
     app.run(port=8443)
 
 
