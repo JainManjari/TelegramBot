@@ -2,10 +2,17 @@
 
 import logging
 from flask import Flask,request
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Dispatcher
+from telegram.ext import Updater
+from telegram.ext import CommandHandler
+from telegram.ext import MessageHandler
+from telegram.ext import Filters 
+from telegram.ext import Dispatcher
 import os
-from telegram import Bot, Update
-from dia1 import get_reply,fetch_news,topics_keyboards
+from telegram import Bot
+from telegram import Update
+from dia1 import get_reply
+from dia1 import fetch_news
+from dia1 import topics_keyboards
 
 #enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -76,7 +83,7 @@ def error(update,bot):
 
 bot=Bot(TOKEN)
 try:
-    bot.set_webhook("https://vast-plains-55036.herokuapp.com/"+TOKEN)    #from heroku app
+    bot.set_webhook("https://4a6701ec423d.ngrok.io/"+TOKEN)    #from heroku app
 except Exception as e:
     print("Error occured ",e)
 
