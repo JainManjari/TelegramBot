@@ -76,7 +76,7 @@ def error(update,bot):
 
 bot=Bot(TOKEN)
 try:
-    bot.set_webhook("https://4a6701ec423d.ngrok.io/"+TOKEN)    
+    bot.set_webhook("hhttps://vast-plains-55036.herokuapp.com/"+TOKEN)    #from heroku app
 except Exception as e:
     print("Error occured ",e)
 
