@@ -21,7 +21,6 @@ enum34==1.1.10
 feedparser==6.0.0
 Flask==1.1.2
 funcsigs==1.0.2
-functools32==3.2.3.post2
 futures==3.3.0
 fuzzywuzzy==0.18.0
 gnewsclient==1.12
